@@ -7,3 +7,10 @@ sources:
     tables:
       - name: ACCOUNT
       - name: ACCOUNTCONTEXTSEARCH
+
+  - name: wagway_hubspot
+    database: wagway_raw
+    schema: hubspot
+    tables:
+      - name: ANIMALS
+      - name: ANIMALS_PROPERTY_HISTORY
