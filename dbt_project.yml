@@ -41,6 +41,7 @@ models:
     # Applies to all files under models/example/
   #example:
     #+materialized: table
+    
   wagway:
     silver:
       +database: "{{ env_var('DBT_WAGWAY_DB', 'wagway_dev') }}"
