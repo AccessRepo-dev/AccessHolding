@@ -1,8 +1,3 @@
-/*{% macro generate_schema_name(custom_schema_name, node) %}
-    {# Use the schema exactly as defined in project.yml, without prefixing #}
-    {{ custom_schema_name | lower }}
-{% endmacro %}
-*/
 {% macro generate_schema_name(custom_schema_name, node) %}
     {# 
       If running in dbt Cloud or CI/CD (DEPLOYMENT_ENV = "prod"),
