@@ -2,7 +2,8 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'my_new_project'
+#name: 'my_new_project'
+name: 'AccessHolding'
 version: '1.0.0'
 config-version: 2
 
@@ -36,17 +37,17 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  AccessHolding:
+#  AccessHolding:
     # Applies to all files under models/example/
-    example:
-      +materialized: table
-    wagway:
-      silver:
-        +database: "{{ env_var('WagWay_Dev', 'wagway_dev') }}"
-        +schema: SILVER
-        +materialized: table   # optional, override default
-      gold:
-        +database:  "{{ env_var('WagWay_Dev', 'wagway_dev') }}"
-        +schema: GOLD
-        +materialized: table   # optional
+  #example:
+    #+materialized: table
+  wagway:
+    silver:
+      +database: wagway_dev
+      +schema: silver
+      +materialized: table   # optional, override default
+    gold:
+      +database:  "{{ env_var('WagWay_Dev', 'wagway_dev') }}"
+      +schema: GOLD
+      +materialized: table   # optional
 

@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: wagway_netsuite
-    database: wagway_raw
-    schema: netsuite
+    database: WAGWAY_RAW
+    schema: NETSUITE
     tables:
       - name: ACCOUNT
       - name: ACCOUNTCONTEXTSEARCH
