@@ -43,11 +43,11 @@ models:
     #+materialized: table
   wagway:
     silver:
-      +database: wagway_dev
+      +database: "{{ env_var('DBT_WAGWAY_DB', 'wagway_dev') }}"
       +schema: silver
       +materialized: table   # optional, override default
     gold:
-      +database:  "{{ env_var('WagWay_Dev', 'wagway_dev') }}"
+      +database:  "{{ env_var('DBT_WAGWAY_DB', 'wagway_dev') }}"
       +schema: GOLD
       +materialized: table   # optional
 
